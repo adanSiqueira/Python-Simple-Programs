@@ -1,0 +1,24 @@
+#this program convert km to miles
+def kmToMiles(n):
+  miles = round (n / 0.62137)
+  return miles
+
+def milesToKm(n):
+  km = round (n * 0.62137 , 2)
+  return km
+
+print ('This program converts km to miles and vice-versa.')
+
+option = ''
+while (option != "km" or option != "miles"):
+
+  option = input('Choose the enter unit (km or miles): ')
+
+  if option == 'km':
+    d = float (input('Enter with the distance in km: '))
+    print ("{} miles" .format(kmToMiles(d)))
+    break
+  elif option == 'miles':
+    d = float (input('Enter with the distance in miles: '))
+    print ("{} km" .format(milesToKm(d)))
+    break
