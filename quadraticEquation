@@ -1,0 +1,19 @@
+#this program solves a quadratic equation
+def quadraticEquation(a,b,c):
+  import math
+  delta =  math.pow(b,2) -( 4*a*c)
+
+  if delta < 0:
+    return "There's no solution."
+  else:
+    x1 = round ( (-1*b + delta**0.5) / (2*a) , 2)
+    x2 = round ( (-1*b - delta**0.5) / (2*a) , 2)
+    return x1,x2
+
+print("This program calculates the solution of a quadractic equation. ")
+
+a = float(input("Inform the value of a: "))
+b = float(input("Inform the value of b: "))
+c = float(input("Inform the value of c: "))
+
+print('The solution is: T = {}' .format(quadraticEquation(a,b,c)))
