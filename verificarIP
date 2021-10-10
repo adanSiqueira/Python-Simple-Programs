@@ -1,0 +1,33 @@
+# ferramenta em python para verificar, baseado no endereço de IP, usuários que pertencem a uma mesma rede (normalmente os dois
+# primeiros octetos) ou usuários que logaram em uma mesma máquina (normalmente
+# os dois últimos octetos identificam a estação).
+
+ips = {}
+resp = "S"
+while resp == "S":
+    ips[(input("Digite os dois primeiros octetos: "),
+    input("Digite os dois últimos octetos: "))] = input("Nome da máquina: ")
+    resp = input("Digite <S> para adicionar outra rede ou <N> caso contrário: ").upper()
+
+print ("Exibindo ip's: ")
+for ip in ips.keys():
+    print(ip[0]+"."+ip[1])
+
+resp = input("Deseja buscar máquinas com o mesmo endereço? <S> ou <N>: ")
+if (resp == <S>):
+    print ("Exibindo máquinas com o mesmo endereço: ")
+    pesquisa = input ("Digite os dois últmos octetos: ")
+    for ip, nome in ips.items():
+        print("Máquinas com o mesmo endereço (redes diferentes): ")
+        if (ip[1] == pesquisa):
+            print(nome)
+
+resp = input("Deseja vrf se duas máquinas compõem uma mesma rede? <S> ou <N>: ")
+if (resp == < S >):
+    print ("Exibindo máquinas que compõem uma mesma rede: ")
+    rede = input("Digite os dois primeiros octetos: ")
+    for ip, nome in ips.items():
+        if (ip[0] == rede):
+            print (nome)
+else:
+    break
